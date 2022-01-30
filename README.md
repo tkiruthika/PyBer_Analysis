@@ -30,13 +30,14 @@ The below dataframe shows that the urban cities produce more revenue with more n
 
 ### Multiple-line Graph of the total weekly fares for each city type
 
-- To create a multiple line graph we need to create new dataframe with multiple indices using **groupby()** on the "type and "date" columns of the **8pyber_data_df** dataframe.
+- To create a multiple line graph we need to create new dataframe with multiple indices using **groupby()** on the "type and "date" columns of the **pyber_data_df** dataframe.
 - Total fare amount for each date is calcultaed using **sum()** method on the "fare" column.
 - The index is reset using **reset_index()** and the **pivot()** is used to convert the dataframe to pivot table with "date" as index, each column is a city "type," and the values are the "fare."
 
     ![7](https://user-images.githubusercontent.com/95719819/151693299-9d7d6e2c-d82e-484f-a712-445e19aab2c4.PNG)
+    
 - A new DataFrame is created using the **loc** method for the date range: 2019-01-01 through 2019-04-28.
-- The index of the dataframe is reset to datetime datatype using **pd.to_datetime**.
+- The index of the dataframe is reset to datetime datatype using **pd.to_datetime()**.
 - Another new dataframe is created by applying **resample()** function to the resample the data in the weekly bins and **sum()** is applied to get the total fares for each week.
   
   ![9](https://user-images.githubusercontent.com/95719819/151693559-fa106eaa-a91b-48d4-b178-8ab70a27ec0a.PNG)
@@ -46,31 +47,15 @@ The below dataframe shows that the urban cities produce more revenue with more n
   The below multiple-line graph shows that the urban cities are highest ride sharing and rural cites are least ride sharing cities whereas the suburban cities are medium ride sharing cities.
 
   ![PyBer_fare_summary](https://user-images.githubusercontent.com/95719819/151693731-ae752542-21fb-4e2f-bccb-f224167936b5.png)
+  
+## Summary
+
+We can summarize this challenge with three business recommendations addressing the disparities among the city types.
+
+- Our analysis clearly shows that the Urban cities are highest ride sharing cities, so we can invest more in these cities in the future to get more revenue.
+- Also, we can increase the number of drivers in suburban cities so that the number of rides will get increased which will increase the total fare and the overall revenue in the future.
+- In rural cities it looks like people are not much interested in ride sharing we can provide some discounts for first time riders and advertise about the best offers so that they get attracted to ride sharing.
 
 
 
 
-The analysis should contain the following:
-
-Overview of the analysis: Explain the purpose of the new analysis.
-Results: Using images from the summary DataFrame and multiple-line chart, describe the differences in ride-sharing data among the different city types.
-Summary: Based on the results, provide three business recommendations to the CEO for addressing any disparities among the city types.
-Deliverable 3 Requirements
-Structure, Organization, and Formatting (6 points)
-The written analysis has the following structure, organization, and formatting:
-
-There is a title, and there are multiple sections. (2 pt)
-Each section has a heading and subheading. (2 pt)
-Links to images are working and displayed correctly. (2 pt)
-Analysis (14 points)
-The written analysis has the following:
-
-Overview of the analysis:
-
-The purpose of the new analysis is well defined. (3 pt)
-Results:
-
-There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type. (7 pt)
-Summary:
-
-There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
